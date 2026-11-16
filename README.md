@@ -1,306 +1,311 @@
  
-# 🌱 AI-Based Crop Disease Detection and Solution Recommendation System for Bangladeshi Farmers
+# AI-Based Crop Disease Detection and Solution Recommendation System for Bangladeshi Farmers
 
-**Team Name:** CSE4104-7G-T02  
-**Course Code:** CSE4104  
-**Section:** 7G  
-**Department:** Computer Science and Engineering  
-**Institution:** Northern University of Business and Technology Khulna
+An AI-powered web application designed to help Bangladeshi farmers identify crop diseases from leaf images and receive verified treatment and prevention guidance.
+
+## 🔗 GitHub Repository
+
+https://github.com/Reedee91/crop-disease-detection
 
 ---
 
-## 1. Project Title
+## 📌 Project Information
 
-**AI-Based Crop Disease Detection and Solution Recommendation System for Bangladeshi Farmers**
+| Field | Details |
+|---|---|
+| Project Title | AI-Based Crop Disease Detection and Solution Recommendation System for Bangladeshi Farmers |
+| Course Code | CSE 4104 |
+| Course Title | Software Development III |
+| Team Name | CSE4104-7G-T02 |
+| Section | 7G |
+| Department | Computer Science and Engineering |
+| University | Northern University of Business and Technology Khulna |
 
-**Project Focus:** Disease → Explanation → Solution
+---
 
-## 2. Project Description
+## 👥 Team Members
 
-The AI-Based Crop Disease Detection and Solution Recommendation System is an AI-powered web application designed to help farmers in Bangladesh identify crop diseases from leaf images and receive practical management recommendations.
+| Name | Student ID | Responsibility |
+|---|---|---|
+| Arnob Basak (Team Leader) | 11230321491 | Team Coordination and System Analysis |
+| Sheikh Mofazzal Hossain | 11230321472 | Frontend Development and UI Design |
+| Subaita Kamal Reedee | 11230321291 | Backend Development and Database |
+| Zareen Tasnim Mou | 11230321289 | AI/ML Model and Image Processing |
 
-Farmers can upload an image of an affected crop leaf. The AI model analyzes the image and predicts the possible disease with a confidence score.
+---
 
-Based on the prediction, the system provides disease information, symptoms, possible causes, treatment guidance, and preventive measures using a verified agricultural knowledge base.
+## 📖 Project Description
 
-The main goal of this project is to make preliminary crop disease identification easier and more accessible for Bangladeshi farmers.
+Crop diseases are one of the major challenges faced by farmers in Bangladesh. Many farmers struggle to identify diseases at an early stage and often do not know the correct treatment and prevention methods.
 
-## 3. Problem Statement
+Our project aims to develop an AI-based web application that helps farmers identify crop diseases using photographs of affected plant leaves.
 
-Agriculture is an important part of Bangladesh's economy, and crop diseases can cause significant losses for farmers.
+Users can upload leaf images to the system. The system validates and preprocesses the images before using a CNN or transfer-learning model to predict the most likely disease and display a confidence score.
 
-Small and medium-scale farmers often face difficulties identifying crop diseases from visual symptoms. They may also lack access to reliable disease information, appropriate management guidance, and agricultural experts.
+After prediction, the system retrieves relevant information from a verified agricultural knowledge base. It provides disease symptoms, causes, treatment steps, and prevention measures in simple Bangla and English.
 
-Some existing disease detection solutions focus mainly on identifying diseases but do not provide sufficient practical guidance about what farmers should do next.
+If the prediction confidence is low, the system displays an uncertainty warning and recommends consulting an agricultural expert.
 
-Artificial Intelligence can help address these challenges by analyzing crop leaf images and providing preliminary disease predictions.
+**Main Concept: Disease Detection → Explanation → Solution Recommendation**
 
-Therefore, we propose an AI-based system that combines crop disease detection with understandable disease information, management recommendations, and preventive guidance.
+---
 
-## 4. Project Objectives
+## 🎯 Project Objectives
 
-- Develop an AI-based crop disease detection system.
-- Identify selected crop diseases from leaf images.
-- Display predicted disease names with confidence scores.
-- Apply image preprocessing techniques.
-- Provide disease information, symptoms, and possible causes.
-- Recommend practical disease management and prevention steps.
-- Identify uncertain predictions and suggest expert consultation.
-- Develop a simple and user-friendly web application.
-- Maintain previous disease detection records.
+- Detect selected crop diseases using AI.
+- Display prediction results with confidence scores.
+- Provide verified treatment and prevention guidance.
+- Support both Bangla and English languages.
+- Recommend agricultural expert consultation when necessary.
+- Maintain users' previous detection records.
+- Provide an admin dashboard for system management.
 
-## 5. Proposed Features
+---
 
-### A. Farmer Account Management
-- Farmer registration and secure login.
-- Basic user profile management.
+## 🚀 Proposed Features
 
-### B. Crop Image Upload
-- Upload images of affected crop leaves.
-- Support image-based disease analysis.
+### 1. User Management
+- User registration and login.
+- User profile management.
+- Password change and logout.
+- Role-based access control.
 
-### C. AI-Based Disease Detection
-- CNN-based crop disease prediction.
-- Display predicted disease names.
-- Show prediction confidence scores.
+### 2. Leaf Image Upload and Validation
+- Upload leaf images from a device gallery or camera.
+- Preview selected images before submission.
+- Support JPG, JPEG, and PNG formats.
+- Maximum image size: 5 MB.
+- Check image quality, blur, and resolution.
+- Reject unrelated images that are not plant leaves.
 
-### D. Disease Information
-- Disease names and affected crop information.
-- Symptoms and possible causes.
-- Basic disease explanations.
+### 3. AI-Based Disease Detection
+- Analyze uploaded leaf images.
+- Use CNN or transfer-learning models.
+- Detect selected diseases of tomato, potato, and rice.
+- Identify healthy leaf classes where datasets are available.
+- Display predicted disease names and confidence scores.
+- Show uncertainty warnings for low-confidence predictions.
 
-### E. Solution Recommendation
-- Practical disease management guidance.
-- Treatment recommendations from a verified agricultural knowledge base.
-- Preventive measures to reduce future disease risks.
+### 4. Disease Information and Solution
+- Display disease symptoms and causes.
+- Provide treatment and management steps.
+- Show prevention measures.
+- Retrieve guidance from a verified agricultural knowledge base.
+- Record the sources of agricultural information.
 
-### F. Expert Referral
-- Identify low-confidence predictions.
-- Recommend consultation with agricultural experts when results are uncertain.
+### 5. Bangla and English Support
+- Display disease information in Bangla and English.
+- Provide a language selection option.
+- Use simple and understandable language.
 
-### G. Detection History
-- Save previous detection results.
-- Allow users to review their detection history.
+### 6. Expert Referral
+- Recommend agricultural expert consultation for uncertain predictions.
+- Suggest expert consultation for severe infections.
+- Allow experts to review and verify knowledge-base entries.
 
-### H. Admin Dashboard
-- Manage crop information.
-- Manage disease information and symptoms.
-- Manage treatment and prevention recommendations.
+### 7. Detection History
+- Save previous disease detection results.
+- View previous detection records.
+- Display the newest records first.
+- Allow users to filter and delete their own records.
+
+### 8. Admin Dashboard
+- Manage crop and disease information.
+- Add and update treatment and prevention guidance.
 - Manage registered users.
+- View basic system statistics.
+- Configure the confidence threshold.
+- Record knowledge-base information sources.
 
-## 6. Technology Stack
+---
 
-| Component | Technology |
+## 🛠️ Proposed Technology Stack
+
+| Category | Technology |
 |---|---|
 | Frontend | React.js (Vite) |
 | Backend | Python, Django |
 | API | Django REST Framework |
 | Database | PostgreSQL |
-| AI Model | CNN / Transfer Learning |
+| AI/ML Model | CNN / Transfer Learning |
 | Image Processing | OpenCV, Pillow |
 | Dataset | PlantVillage and other suitable public datasets |
-| Optional AI Assistant | Google Gemini API |
+| Optional AI Service | Google Gemini API |
 | Version Control | Git and GitHub |
 | Code Editor | Visual Studio Code |
 
-### Programming Languages
-- Python
-- JavaScript
-- HTML
-- CSS
-- SQL
+*Note: These are the proposed technologies for the project.*
 
-## 7. AI Integration
+---
 
-The system will use a Convolutional Neural Network (CNN) or a transfer-learning model to classify crop leaf images.
+## 🤖 AI Integration
 
-OpenCV and Pillow will be used to preprocess uploaded images before sending them to the AI model.
+The system will use a CNN or transfer-learning model to identify crop diseases from uploaded leaf images.
 
-The model will predict the most likely disease and provide a confidence score.
+### AI Detection Process
 
-Disease information, symptoms, treatment guidance, and preventive measures will be retrieved from a verified agricultural knowledge base.
+1. Receive the uploaded leaf image.
+2. Validate image format, size, and quality.
+3. Preprocess the image using OpenCV or Pillow.
+4. Send the processed image to the trained AI model.
+5. Predict the most likely disease.
+6. Calculate and display the confidence score.
 
-If the model produces a low-confidence prediction, the system will display an uncertainty warning and recommend consulting an agricultural expert.
+### Confidence Threshold
 
-**Optional AI Integration:** Google Gemini API may be used to explain disease information in simple Bangla.
+The default confidence threshold will be approximately 75%. The administrator can configure this threshold.
 
-## 8. Proposed System Workflow
+### Google Gemini API (Optional)
 
-1. The farmer uploads a crop leaf image.
-2. OpenCV and Pillow preprocess the image.
-3. The CNN model analyzes the processed image.
-4. The model predicts the possible disease and confidence score.
-5. The predicted disease is matched with the agricultural knowledge base.
-6. Django REST API sends the result to the frontend.
-7. React.js displays disease information, management guidance, and prevention steps.
-8. Low-confidence predictions are flagged for expert consultation.
-9. Detection results are stored in the PostgreSQL database.
+The Gemini API may be used only to simplify or translate verified knowledge-base information.
 
-## 9. Initial Project Scope
+It will not independently generate treatment or prevention advice. If Gemini is unavailable, the system will display the stored knowledge-base information.
 
-The initial version of the project will focus on selected diseases of:
+---
+
+## 🔄 Proposed System Workflow
+
+1. User registers or logs into the system.
+2. User uploads a crop leaf image.
+3. The system validates the image.
+4. The image is preprocessed.
+5. The AI model predicts the disease.
+6. The system displays the disease name and confidence score.
+7. Related information is retrieved from the verified knowledge base.
+8. Symptoms, causes, treatment, and prevention guidance are displayed.
+9. If confidence is low, an expert consultation warning is shown.
+10. The detection result is saved in the user's history.
+
+---
+
+## 🌱 Initial Project Scope
+
+The first version will focus on selected diseases of:
 
 - Tomato
 - Potato
 - Rice
 
-Healthy leaf categories will also be included where suitable datasets are available.
+Healthy leaf classes will also be included where suitable datasets are available.
 
-The first version will focus on image-based disease identification and basic disease management recommendations.
-
-### Features Outside the Initial Scope
+### Out of Scope for the First Version
 
 - Weather forecasting.
 - Market-price prediction.
 - Crop-profit prediction.
-- Weather-based agricultural recommendations.
+- Weather-based recommendations.
+- Other crops beyond the selected classes.
+- Live chat with agricultural experts.
+- Online payments.
+- Native mobile applications.
+- Pesticide or fertilizer sales and automatic ordering.
 
-These features may be considered for future development if time permits.
+---
 
-## 10. Project Structure
+## 📚 Agricultural Knowledge Base
+
+The system will maintain a verified agricultural knowledge base containing:
+
+- Crop information.
+- Disease names.
+- Disease symptoms.
+- Disease causes.
+- Treatment and management steps.
+- Prevention measures.
+- Information sources.
+
+Potential information sources include:
+
+- Department of Agricultural Extension (DAE).
+- Bangladesh Agricultural Research Institute (BARI).
+- Bangladesh Rice Research Institute (BRRI).
+
+Knowledge-base entries will be reviewed by agricultural experts before being marked as verified.
+
+---
+
+## 📁 Proposed Project Structure
 
 ```text
 crop-disease-detection/
 │
-├── frontend/                 # React.js application
+├── frontend/
+│   ├── public/
+│   └── src/
 │
-├── backend/                  # Django backend and REST API
+├── backend/
+│   ├── manage.py
+│   └── requirements.txt
 │
-├── ai_model/                 # CNN training and prediction
+├── ai_model/
+│   ├── dataset/
+│   ├── training/
+│   └── models/
 │
-├── documentation/            # Proposal, reports and diagrams
+├── documentation/
+│   ├── SRS.pdf
+│   └── diagrams/
 │
-└── README.md                 # Project documentation
+├── README.md
+└── .gitignore
 ```
 
-## 11. Development Plan
-
-| Phase | Planned Activities |
-|---|---|
-| Phase 1 | Project setup, requirement analysis and system design |
-| Phase 2 | Crop and disease selection, dataset collection and preparation |
-| Phase 3 | Image preprocessing and CNN model development |
-| Phase 4 | Model training, evaluation and backend API development |
-| Phase 5 | Frontend development and database integration |
-| Phase 6 | Knowledge base, detection history and expert referral |
-| Phase 7 | System integration, testing and deployment |
-
-## 12. Expected Outcome
-
-The expected outcome is a user-friendly web application that allows farmers to:
-
-- Upload crop leaf images.
-- Identify possible crop diseases using AI.
-- View disease predictions and confidence scores.
-- Understand disease symptoms and possible causes.
-- Receive practical disease management recommendations.
-- Learn preventive agricultural practices.
-- Get an expert referral suggestion when predictions are uncertain.
-- Review previous disease detection records.
-
-The project aims to make preliminary crop disease identification more accessible and useful for Bangladeshi farmers.
-
-## 13. Team Information
-
-**Team Name:** CSE4104-7G-T02
-
-**Course Code:** CSE4104
-
-**Section:** 7G
-
-**Department:** Computer Science and Engineering
-
-**Institution:** Northern University of Business and Technology Khulna
-
-### Team Members
-
-| No. | Name | Student ID | Responsibility |
-|---|---|---|---|
-| 1 | Arnob Basak (Team Leader) | 11230321491 | Team Coordination and System Analysis |
-| 2 | Sheikh Mofazzal Hossain | 11230321472 | Frontend and User Interface |
-| 3 | Subaita Kamal Reedee | 11230321291 | Backend and Database |
-| 4 | Zareen Tasnim Mou | 11230321289 | AI/ML Model and Image Processing |
-
-## 14. Getting Started
-
-### Prerequisites
-
-Make sure the following software is installed:
-
-- Python 3.x
-- pip
-- Node.js (LTS version)
-- npm
-- PostgreSQL
-- Git
-- Visual Studio Code
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/Reedee91/crop-disease-detection.git
-
-cd crop-disease-detection
-```
-
-### Backend Setup (Django)
-
-```bash
-cd backend
-
-python -m venv venv
-
-venv\Scripts\activate
-
-pip install -r requirements.txt
-```
-
-After configuring the PostgreSQL database and creating the Django project:
-
-```bash
-python manage.py migrate
-
-python manage.py runserver
-```
-
-Backend server:
-
-http://127.0.0.1:8000/
-
-### Frontend Setup (React.js with Vite)
-
-Open another terminal:
-
-```bash
-cd frontend
-
-npm install
-
-npm run dev
-```
-
-Frontend development server:
-
-http://localhost:5173/
-
-**Note:** These setup commands will work after the Django backend, `requirements.txt`, and React Vite application have been created. PostgreSQL must also be configured before running migrations.
-
-## 15. Future Improvements
-
-- Support for additional crops and diseases.
-- Improved AI model accuracy with more diverse datasets.
-- Bangla language support for farmers.
-- Agricultural expert consultation features.
-- More detailed disease management information.
-
-## 16. Disclaimer
-
-This project is developed for educational and preliminary crop disease identification purposes.
-
-AI predictions may not always be accurate. Recommendations should be treated as general guidance and verified with qualified agricultural experts before taking important treatment decisions.
+*The project structure may change during development.*
 
 ---
 
-**Developed by:** CSE4104-7G-T02  
-**Department of Computer Science and Engineering**  
-**Northern University of Business and Technology Khulna**
+## 🔐 Security and Reliability
+
+- Passwords will be stored using secure password hashing.
+- Protected pages and APIs will require authentication.
+- Role-based access control will be implemented.
+- Uploaded images will be validated.
+- API keys and database credentials will be stored in environment variables.
+- Users will only access their own detection history.
+- The system will handle errors if the model, database, or optional Gemini API is unavailable.
+
+---
+
+## 📅 Development Plan
+
+| Phase | Activities |
+|---|---|
+| Phase 1 | Requirement Analysis and SRS Documentation |
+| Phase 2 | System Design and Database Design |
+| Phase 3 | Frontend Development |
+| Phase 4 | Backend and API Development |
+| Phase 5 | Dataset Preparation and AI Model Training |
+| Phase 6 | AI Model and Backend Integration |
+| Phase 7 | Testing and Evaluation |
+| Phase 8 | Final Deployment and Documentation |
+
+---
+
+## 📊 Expected Outcome
+
+The expected outcome is a user-friendly web application that helps Bangladeshi farmers identify selected crop diseases through leaf images and understand possible solutions using verified agricultural information.
+
+The system aims to support early disease identification, provide accessible agricultural guidance, and encourage consultation with agricultural experts when necessary.
+
+---
+
+## ⚠️ Disclaimer
+
+The system provides preliminary crop disease identification only. AI predictions may not always be accurate, particularly for real-world field images. It does not replace professional agricultural advice. Farmers should consult an agricultural expert before making important treatment decisions.
+
+---
+
+## 📌 Project Status
+
+**Status:** Planning and Development
+
+This project is being developed as part of the Software Development III (CSE 4104) course.
+
+---
+
+## 👨‍💻 Developed By
+
+**Team CSE4104-7G-T02**
+
+Department of Computer Science and Engineering  
+Northern University of Business and Technology Khulna
